@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="keywords" content="Primeiro Trabalho Final de Desenvolvimento WEB">
     <meta name="author" content="Aloizio Pita de Castro Júnior">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <title>Perfil Pessoal</title>
 
     <style>
@@ -19,6 +20,30 @@
             border: 2px solid rgb(41, 51, 130);
             border-radius: 20px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        .container-tecnologias {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 50px auto 0;
+            max-width: 600px;
+            width: 90%;
+            background-color: rgb(206, 209, 218);
+            border: 2px solid rgb(41, 51, 130);
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+        }
+        .container-tecnologias img{
+            width: 90px;
+            height: auto;
+            margin-left: 3px;
+            margin-right: 3px;
         }
         .perfil {
             width: 150px;
@@ -29,6 +54,15 @@
         }
         .nome {
             color: rgb(41, 51, 130);
+            margin-bottom: 5px;
+        }
+        .profissao{
+            font-size: 20px;
+            margin-bottom: 5px;
+        }
+        .apresentacao {
+            font-family: 'Poppins', sans-serif;
+            font-size: 15px;
         }
     </style>
 </head>
@@ -36,7 +70,20 @@
     <div class="container-perfil">
         <img class="perfil" src="imagens/perfil.png" alt="Foto de Perfil">
         <h2 class="nome"> Aloizio Júnior </h2>
-        <>
+        <p class="profissao"><strong>Engenheiro de Software</strong></p>
+        <p class="apresentacao">Sou formado em Ciências Exatas pela UFJF, faculdade na qual também iniciei o curso de 
+            Ciências da Computação, que agora será finalizada na Estácio. Já trabalhei como bolsista em um
+            projeto de uso da gamificação como facilitador no processo de ensino e aprendizagem, além de suporte técnico em um escritório
+            de contabilidade. Hoje trabalho como Engenheiro de Software. Segue abaixo algumas tecnologias que já trabalhei.
+        </p>
+    </div>
+    <div class="container-tecnologias">
+        <img src="imagens/C.png" alt="C/C++"></img>
+        <img src="imagens/java.png" alt="Java"></img>
+        <img src="imagens/sql.png" alt="SQL"></img>
+        <img src="imagens/html.png" alt="HTML"></img>
+        <img src="imagens/css.jpg" alt="CSS"></img>
+        <img src="imagens/javascript.png" alt="Javascript"></img>
     </div>
 </body>
 </html>
