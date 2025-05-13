@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Primeiro Trabalho Final de Desenvolvimento WEB">
+    <meta name="author" content="Aloizio Pita de Castro Júnior">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <title>Página de Contato</title>
+    <style>
+        .container-form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 50px auto 0;
+            max-width: 600px;
+            width: 100%;
+            background-color: rgb(206, 209, 218);
+            border: 1px solid rgb(41, 51, 130);
+            border-radius: 20px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            padding-left: 15px;
+            padding-right: 15px;
+            padding-top: 10px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .button{
+            display: block;
+            border: 1px solid rgb(41, 51, 130);
+            border-radius: 10px;
+            margin: 20px auto;
+            padding: 10px 25px;
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+        }
+        .fields{
+            display: block;
+            border: 2px solid rgb(41, 51, 130);
+            margin: 1px auto;
+        }
+        .textarea{
+            width: 90%;
+            height: 60px;
+            padding: 10px;
+            border: 2px solid rgb(41, 51, 130);
+            margin: 20px auto;
+            font-family: 'Poppins', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div class="container-form">
+        <form id="container-form" action="/submit_form" method="post">
+            <h2>Solicitação de Suporte</h2>
+            <label for="name"></label>
+            <input class="fields" type="text" id="name" placeholder="Nome"><br>
+            <label for="email"></label>
+            <input class="fields" type="email" id="email" placeholder="E-mail">
+            <label for="problem-description"></label>
+            <textarea class="textarea" id="problem-description" placeholder="Descreva o problema"></textarea>
+            <input class="button" type="submit" value="Enviar">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById("container-form").addEventListener("submit", function(event) {
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const description = document.getElementById("problem-description").value.trim();
+
+            if (!name || !email || !description){
+                alert("Favor preencher todos os campos antes de enviar!");
+                event.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>
